@@ -1,0 +1,131 @@
+.main__title{
+  position: relative;
+  margin:0 0 40px 0;
+  font: 700 50px/64.7px 'pt_serifbold', arial, helvetica, sans-serif;
+  z-index: 1;
+}
+
+.main__title-text::after{
+  display: block;
+  content: '';
+  position: absolute;
+  z-index: -1;
+  background: #ECF3FF;
+}
+
+.main__subtitle{
+  margin:41px 0 41px 0;
+  font: 400 18px/21.09px 'Roboto', arial, helvetica, sans-serif;
+}
+
+.main__button{
+  font: 500 14px/16.41px 'Roboto', arial, helvetica, sans-serif;
+  padding: 14px 16px;
+  text-decoration: none;
+  color: #FFFFFF;
+  background: #0056EC;
+  border-radius: 4px;
+}
+
+.main{
+  padding: 0 63% 100px 0;
+  background: top right no-repeat url('img/mainimg.svg');
+}
+
+body{
+  margin: 0;
+}
+
+.wrapper{
+  margin:auto;
+  width: 80%;
+}
+
+.logo, .menu{
+  display: inline-block;
+}
+
+.header{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 100px;
+}
+
+.logo{
+  position: relative;
+  padding: 40px 0;
+  padding-left: 44px;
+  font: bold 24px/31px 'pt_serifbold', arial, helvetica, sans-serif;
+}
+
+.logo__circle{
+  position: absolute;
+  left: 0px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 28px;
+  height: 28px;
+}
+
+.logo__circle_color_blue{
+  left:8px;
+  top:56%;
+  background:#C8DBFB;
+  border-radius: 50%;
+  opacity: .7;
+}
+
+.logo__circle_color_dark-blue{
+  background: #0056EC;
+  border-radius: 50%;
+  opacity: .7;
+}
+
+.menu{
+  display:flex;
+  align-items: center;
+}
+
+.menu__item:last-child{
+  margin-right: 0;
+}
+
+.menu__item:hover{
+  opacity: .5;
+}
+
+.menu__item{
+  position: relative;
+  margin-right: 26px;
+  font: 500 18px/21px 'Roboto', arial, helvetica, sans-serif;
+  color: #000;
+  text-decoration: none;
+  transition: opacity .5s;
+}
+
+.menu__item_active::after{
+  position: absolute;
+  display: block;
+  content:'';
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: #0056EC;
+}
+
+.menu__item::after{
+  position: absolute;
+  display: block;
+  content:'';
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: #0056EC;
+  opacity: .5s;
+  transition: opacity .5s, width .5s;
+}
+
+.menu__item:hover::after, .menu__item_active::after{
+  opacity: 1;
+  width: 100%;
+}
